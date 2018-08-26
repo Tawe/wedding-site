@@ -58,9 +58,9 @@ const ContentWrapper = styled.div`
 `
 
 const Names = styled.div`
-    height: 69px;
-    font-size: 80px;
-    line-height: 70px;
+  height: 69px;
+  font-size: 80px;
+  line-height: 70px;
 `
 const Tilda = styled.div`
   font-family: 'Tilda Grande';
@@ -68,14 +68,12 @@ const Tilda = styled.div`
 `
 
 const Day = styled.div`
-    font-size: 65px;
-    width: 70px;
-    height: 40px;
-    align-self: center;
-    padding-right: 10px;
-    line-height: 51px;
-    font-size: 190px;
-}
+  font-size: 65px;
+  width: 70px;
+  height: 40px;
+  align-self: center;
+  padding-right: 10px;
+  line-height: 51px;
 `
 
 const NumberWrapper = styled.div`
