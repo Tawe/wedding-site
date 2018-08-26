@@ -14,10 +14,10 @@ export default injectGlobal`
 	font-family: "Tilda Grande";
 	font-weight: Normal;
 	font-style: Italic;
-	      src: url("https//cloud.typenetwork.com/projectLicenseWeb/13386/fontfile/eot/?4f33fd5c1fe001660ab155608fceacc919283643");
-        src: url("https//cloud.typenetwork.com/projectLicenseWeb/13386/fontfile/eot/?4f33fd5c1fe001660ab155608fceacc919283643#iefix") format("embedded-opentype"),
-             url("https//cloud.typenetwork.com/projectLicenseWeb/13386/fontfile/woff2/?4f33fd5c1fe001660ab155608fceacc919283643") format("woff2"),
-             url("https//cloud.typenetwork.com/projectLicenseWeb/13386/fontfile/woff/?4f33fd5c1fe001660ab155608fceacc919283643") format("woff");
+	      src: url("//cloud.typenetwork.com/projectLicenseWeb/13386/fontfile/eot/?4f33fd5c1fe001660ab155608fceacc919283643");
+        src: url("//cloud.typenetwork.com/projectLicenseWeb/13386/fontfile/eot/?4f33fd5c1fe001660ab155608fceacc919283643#iefix") format("embedded-opentype"),
+             url("//cloud.typenetwork.com/projectLicenseWeb/13386/fontfile/woff2/?4f33fd5c1fe001660ab155608fceacc919283643") format("woff2"),
+             url("//cloud.typenetwork.com/projectLicenseWeb/13386/fontfile/woff/?4f33fd5c1fe001660ab155608fceacc919283643") format("woff");
   }
   @font-face {
     font-family: "Futura";
