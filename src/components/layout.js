@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 import './layout.css'
+import {} from 'http://cloud.typenetwork.com/projects/2722/fontface.css'
 import '../shared/globalStyles'
 
 const Layout = ({ children, data }) => (
