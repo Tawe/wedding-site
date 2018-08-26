@@ -18,14 +18,15 @@ const Container = styled.div`
     justify-content: space-around;
     align-items: center;
     height: 50px;
-    width: 173px;
+    width: 180px;
     float: right;
 `
 
 const Copy = styled.div`
     color: #fdfdfe;
     font-family: 'FuturaBook';
-    font-size: 8px;
     letter-spacing: 0.3em;
-    padding-left: 15px;
+    font-size: 9px;
+    height: 22px;
+    padding-left: 22px;
 `
