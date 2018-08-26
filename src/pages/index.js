@@ -20,7 +20,7 @@ export default () => (
             <HashTag>#2BECOMEMUNN</HashTag>
             <NamesSVG />
 
-      <Box width='200px' margin="10px auto">
+      <Box width='200px' margin="30px auto">
             <Flex direction={'row'} justify={'space-around'}>
               <DateSection>SEPT</DateSection>
               <NumberWrapper>
