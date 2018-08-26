@@ -5,6 +5,7 @@ import Layout from '../components/layout'
 import Ribbon from '../components/ribbon';
 import Flex from  '../components/flex';
 import DateSection from '../components/datesection'
+import media from '../components/mediaqueires'
 
 export default () => (
     <Layout>
@@ -57,8 +58,9 @@ const ContentWrapper = styled.div`
 
 const Names = styled.div`
   height: 69px;
-  font-size: 80px;
+  font-size: 60px;
   line-height: 70px;
+  ${media.tablet` font-size: 80px;`}
 `
 const Tilda = styled.div`
   font-family: 'Tilda Grande';
