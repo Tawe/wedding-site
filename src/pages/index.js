@@ -22,9 +22,7 @@ export default () => (
               <Flex direction={'row'} justify={'space-around'}>
                 <DateSection>SEPT</DateSection>
                 <NumberWrapper>
-                <Day>
                   <Tilda>01</Tilda>
-                </Day>
                 </NumberWrapper>
                 <DateSection>2019</DateSection>
               </Flex>
@@ -67,17 +65,13 @@ const Tilda = styled.div`
   color: #9B712A
 `
 
-const Day = styled.div`
+const NumberWrapper = styled.div`
   font-size: 65px;
   width: 70px;
   height: 40px;
   align-self: center;
   padding-right: 10px;
   line-height: 51px;
-`
-
-const NumberWrapper = styled.div`
-  width:50px;
 `
 
 const Box = styled.div`
