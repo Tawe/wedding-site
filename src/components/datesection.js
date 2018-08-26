@@ -12,8 +12,8 @@ export default ({children}) => (
 
 const Container  =  styled.div`
     padding:10px;
-    border-top: solid 2px #9B712A;
-    border-bottom: solid 2px #9B712A;
+    border-top: solid 1px #9B712A;
+    border-bottom: solid 1px #9B712A;
 `
 
 const Copy = styled.div`
