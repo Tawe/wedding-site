@@ -14,3 +14,4 @@ export default injectGlobal`
     font-weight: normal;
     src: local("Futura"), local("Futura"), url(${FuturaStdMediumTtf}) format("ttf"), url(${FuturaStdMediumWoff}) format("woff");
   }`
+

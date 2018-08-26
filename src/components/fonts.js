@@ -9,6 +9,7 @@ import FuturaStdBookTff from "../fonts/FuturaStd-Book.ttf";
 import FuturaStdBookWoff from "../fonts/FuturaStd-Book.woff";
 import FuturaStdBookSVG from "../fonts/FuturaStd-Book.svg";
 
+
 export {
     FuturaStdMediumEot,
     FuturaStdMediumTtf,
@@ -19,5 +20,5 @@ export {
     FuturaStdBookTff,
     FuturaStdBookWoff,
     FuturaStdBookEot,
-    FuturaStdBookSVG
+    FuturaStdBookSVG,
 };

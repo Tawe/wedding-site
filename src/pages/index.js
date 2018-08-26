@@ -1,13 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-
 import Layout from '../components/layout'
 import Ribbon from '../components/ribbon';
 import Flex from  '../components/flex';
-import NamesSVG from '../components/names'
 import DateSection from '../components/datesection'
-import Number from '../components/number'
 
 export default () => (
     <Layout>
@@ -18,16 +15,15 @@ export default () => (
           </RibbionWrapper>
           <ContentWrapper>
             <HashTag>#2BECOMEMUNN</HashTag>
-            <NamesSVG />
-
-      <Box width='200px' margin="30px auto">
-            <Flex direction={'row'} justify={'space-around'}>
-              <DateSection>SEPT</DateSection>
-              <NumberWrapper>
-                <Number />
-              </NumberWrapper>
-              <DateSection>2019</DateSection>
-            </Flex>
+            <Tilda>Kailey Mander & John Munn</Tilda>
+            <Box width='200px' margin="30px auto">
+              <Flex direction={'row'} justify={'space-around'}>
+                <DateSection>SEPT</DateSection>
+                <NumberWrapper>
+                <Tilda>01</Tilda>
+                </NumberWrapper>
+                <DateSection>2019</DateSection>
+              </Flex>
             </Box>
           </ContentWrapper>
         </Flex>
@@ -58,6 +54,12 @@ const ContentWrapper = styled.div`
   text-align: center;
 `
 
+const Tilda = styled.div`
+  font-family:'Tilda Grande';
+  font-size:50px;
+  color:#9B712A
+`
+
 const NumberWrapper = styled.div`
   width:50px;
 `
@@ -67,3 +69,4 @@ const Box = styled.div`
   width: ${props=>props.width};
   margin: ${props=>props.margin};
 `
+
