@@ -15,12 +15,16 @@ export default () => (
           </RibbionWrapper>
           <ContentWrapper>
             <HashTag>#2BECOMEMUNN</HashTag>
-            <Tilda>Kailey Mander & John Munn</Tilda>
+            <Names>
+              <Tilda>Kailey Mander & John Munn</Tilda>
+            </Names>
             <Box width='200px' margin="30px auto">
               <Flex direction={'row'} justify={'space-around'}>
                 <DateSection>SEPT</DateSection>
                 <NumberWrapper>
-                <Tilda>01</Tilda>
+                <Day>
+                  <Tilda>01</Tilda>
+                </Day>
                 </NumberWrapper>
                 <DateSection>2019</DateSection>
               </Flex>
@@ -30,7 +34,6 @@ export default () => (
       </Box>
     </Layout>
 )
-
 const HashTag = styled.div`
   color: #0C2237;
   font-family: 'FuturaBook';
@@ -54,10 +57,25 @@ const ContentWrapper = styled.div`
   text-align: center;
 `
 
+const Names = styled.div`
+    height: 69px;
+    font-size: 80px;
+    line-height: 70px;
+`
 const Tilda = styled.div`
-  font-family:'Tilda Grande';
-  font-size:50px;
-  color:#9B712A
+  font-family: 'Tilda Grande';
+  color: #9B712A
+`
+
+const Day = styled.div`
+    font-size: 65px;
+    width: 70px;
+    height: 40px;
+    align-self: center;
+    padding-right: 10px;
+    line-height: 51px;
+    font-size: 190px;
+}
 `
 
 const NumberWrapper = styled.div`
