@@ -2,9 +2,22 @@
 name: Button
 ---
 
-import { Playground } from 'docz'
+import { Playground, PropsTable } from 'docz'
+import { ThemeProvider } from 'styled-components'
+import Theme from '../../../theme'
+import Button from './'
 
 # Button
+
+<PropsTable of={Button} />
+
 ## Basic usage
 
-  <button>Click me</button>
+<Playground>
+  <ThemeProvider theme={Theme}>
+    <>
+        <Button type='secondary'>Click me</Button>
+        <Button type='primary'>Click me</Button>
+    </>
+    </ThemeProvider>
+</Playground>
