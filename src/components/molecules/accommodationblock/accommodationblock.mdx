@@ -1,0 +1,21 @@
+---
+name: AccommodationBlock
+---
+
+import { Playground, PropsTable } from 'docz'
+import { ThemeProvider } from 'styled-components'
+import Theme from '../../../theme'
+
+import AccommodationBlock from './'
+
+# AccommodationBlock
+
+<PropsTable of={AccommodationBlock} />
+
+## Basic usage
+
+<Playground>
+  <ThemeProvider theme={Theme}>
+    <AccommodationBlock venue="THE HILLCREST VIEW INN" location="11054 Highway 6 Pugwash, Nova Scotia B0K 1L0" phoneNum="(902) 243 2727" distance="4 min drive from venue" />
+  </ThemeProvider>
+</Playground>

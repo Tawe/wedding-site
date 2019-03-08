@@ -1,23 +1,20 @@
 ---
-name: Button
+name: Input
 ---
 
 import { Playground, PropsTable } from 'docz'
 import { ThemeProvider } from 'styled-components'
 import Theme from '../../../theme'
-import Button from './'
+import Input from './'
 
-# Button
+# Input
 
-<PropsTable of={Button} />
+<PropsTable of={Input} />
 
 ## Basic usage
 
 <Playground>
   <ThemeProvider theme={Theme}>
-    <>
-      <Button type="secondary">Click me</Button>
-      <Button type="primary">Click me</Button>
-    </>
+    <Input placeholder="Enter Your RSVP Code" onChange={() => {}} />
   </ThemeProvider>
 </Playground>
