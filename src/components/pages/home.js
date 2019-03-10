@@ -1,8 +1,9 @@
 import React from 'react'
-import styled from 'styled-components'
+
+import Details from '../templates/details'
 
 function Home() {
-  return <div>Hello</div>
+  return <Details />
 }
 
 export default Home
