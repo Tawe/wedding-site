@@ -25,7 +25,6 @@ const Copy = [
 
 const DetailsWrapper = styled('section')`
   background-color: ${props => props.theme.palette.primary};
-  height: 467px;
   width: 100%;
 `
 
