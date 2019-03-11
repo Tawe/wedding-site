@@ -5,7 +5,7 @@ import DetailsBlock from '../../molecules/detailsblock'
 const Details = () => (
   <DetailsWrapper>
     {Copy.map(item => (
-      <DetailsBlock {...item} />
+      <DetailsBlock key={item.title} {...item} />
     ))}
   </DetailsWrapper>
 )

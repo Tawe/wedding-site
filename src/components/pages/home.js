@@ -1,9 +1,15 @@
 import React from 'react'
 
 import Details from '../templates/details'
+import Map from '../molecules/map'
 
 function Home() {
-  return <Details />
+  return (
+    <React.Fragment>
+      <Details />
+      <Map />
+    </React.Fragment>
+  )
 }
 
 export default Home
