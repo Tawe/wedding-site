@@ -1,7 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import t from 'prop-types'
-import { PropsTable } from 'docz'
 
 function Input(props) {
   return <InputStyles {...props} />

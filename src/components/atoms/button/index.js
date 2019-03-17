@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import t from 'prop-types'
-import { PropsTable } from 'docz'
 
 function Button(props) {
   return <ButtonStyles {...props}>{props.children}</ButtonStyles>
@@ -28,6 +27,9 @@ const ButtonStyles = styled('button')`
   ${props => sizes(props)};
   ${props => typeStyles(props)};
   text-transform: uppercase;
+  &:hover {
+    cursor: pointer;
+  }
 `
 
 Button.propTypes = {
