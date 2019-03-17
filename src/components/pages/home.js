@@ -1,13 +1,15 @@
 import React from 'react'
 
 import Details from '../templates/details'
-import Map from '../molecules/map'
+import Accomodations from '../templates/accomodations'
+import Location from '../templates/location'
 
 function Home() {
   return (
     <React.Fragment>
       <Details />
-      <Map />
+      <Location />
+      <Accomodations />
     </React.Fragment>
   )
 }
