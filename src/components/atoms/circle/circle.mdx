@@ -1,0 +1,22 @@
+---
+name: Circle
+---
+
+import { Playground, PropsTable } from 'docz'
+import ThemeProvider from '../../../themeProvider'
+import Circle from './'
+
+# Circle
+
+<PropsTable of={Circle} />
+
+## Basic usage
+
+<Playground>
+  <ThemeProvider>
+    <>
+      <Circle active>1</Circle>
+      <Circle>2</Circle>
+    </>
+  </ThemeProvider>
+</Playground>
