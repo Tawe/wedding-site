@@ -13,7 +13,6 @@ const LinkStyles = styled('a')`
   color: ${props => props.theme.palette.grayscale[0]};
   letter-spacing: 0.12rem;
   font-weight: ${props => props.theme.fontweights.light};
-
 `
 
 export default Link

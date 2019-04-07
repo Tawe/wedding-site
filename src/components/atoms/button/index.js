@@ -6,7 +6,6 @@ function Button(props) {
   return <ButtonStyles {...props}>{props.children}</ButtonStyles>
 }
 
-
 const typeStyles = ({ type, theme, ...rest }) => {
   const { borders, fonts, fontsizes, fontweights, palette, space } = theme
   return `
@@ -33,7 +32,7 @@ Button.propTypes = {
 }
 
 Button.defaultProps = {
-  type: 'primary'
+  type: 'primary',
 }
 
 export default Button
