@@ -28,8 +28,8 @@ const breakpoints = {
 const space = ['0px', '8px', '16px', '24px', '32px', '40px']
 const fontsizes = ['8px', '12px', '14px', '16px', '35px', '45px', '110px']
 const fonts = {
-  primary: `brandonReg, sans-serif`,
-  secondary: `minion, serif`,
+  primary: `breg, sans-serif`,
+  secondary: `mBold, serif`,
 }
 const fontweights = {
   light: 300,
