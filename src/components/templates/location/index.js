@@ -12,7 +12,7 @@ const Location = () => {
   })
   console.log(state)
   return (
-    <section>
+    <section id="location">
       <div>
         <h3>Thinker’s Lodge</h3>
         <p>PUGWASH, NOVA SCOTIA</p>

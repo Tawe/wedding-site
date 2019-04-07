@@ -5,7 +5,7 @@ const Link = ({ children, ...rest }) => (
   <LinkStyles {...rest}>{children}</LinkStyles>
 )
 
-const LinkStyles = styled('a')`
+const LinkStyles = styled.a`
   cursor: pointer;
   text-transform: uppercase;
   font-family: ${props => props.theme.fonts.primary};
@@ -13,6 +13,7 @@ const LinkStyles = styled('a')`
   color: ${props => props.theme.palette.grayscale[0]};
   letter-spacing: 0.12rem;
   font-weight: ${props => props.theme.fontweights.light};
+  text-decoration: none;
 `
 
 export default Link

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import DetailsBlock from '../../molecules/detailsblock'
 
 const Details = () => (
-  <DetailsWrapper>
+  <DetailsWrapper id="details">
     {Copy.map(item => (
       <DetailsBlock key={item.title} {...item} />
     ))}
@@ -23,7 +23,7 @@ const Copy = [
   },
 ]
 
-const DetailsWrapper = styled('section')`
+const DetailsWrapper = styled.section`
   background-color: ${props => props.theme.palette.primary};
   width: 100%;
 `

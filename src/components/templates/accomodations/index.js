@@ -7,11 +7,10 @@ const Accomodations = () => (
   <Query query={GetAccommodations}>
     {({ loading, error, data }) => {
       if (loading) return <p>Loading...</p>
-      console.log(data)
       if (error) return <p>Error :(</p>
 
       return (
-        <div>
+        <section id="accommodations">
           <h3>Accomodations</h3>
           <p>
             {`Blocks of rooms have been reserved at The ${
@@ -25,7 +24,7 @@ const Accomodations = () => (
           {data.accommodations.map(accomodation => (
             <AccomodationsBlock key={accomodation.id} {...accomodation} />
           ))}
-        </div>
+        </section>
       )
     }}
   </Query>
