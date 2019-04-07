@@ -36,6 +36,7 @@ const fontweights = {
   medium: 500,
   bold: 700,
 }
+
 const borders = [`border: 1px solid ${palette.grayscale[3]};`, `border: 1px solid ${palette.grayscale[0]};`]
 
 const media = Object.keys(breakpoints).reduce((accumulator, label) => {

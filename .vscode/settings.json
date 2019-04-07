@@ -1,0 +1,25 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true
+  },
+  "files.associations": {
+    "*.js": "javascriptreact",
+    ".stylelintrc": "json",
+    ".eslintrc": "json",
+    ".babelrc": "json"
+  },
+  "stylelint.enable": true,
+  "css.validate": false,
+  "scss.validate": false,
+  "editor.formatOnSave": true,
+  "javascript.validate.enable": false,
+  "stylelint.config": {
+    "extends": "./.stylelintrc"
+  },
+  "prettier.stylelintIntegration": true
+}

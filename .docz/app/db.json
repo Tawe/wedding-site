@@ -1,0 +1,37 @@
+{
+  "config": {
+    "title": "Wedding Site",
+    "description": "My awesome app using docz",
+    "menu": [],
+    "ordering": "descending",
+    "version": "0.1.0",
+    "repository": null,
+    "native": false,
+    "codeSandbox": true,
+    "themeConfig": {}
+  },
+  "entries": {
+    "src/components/atoms/button/button.mdx": {
+      "name": "Button",
+      "id": "efcf438300ecafaa65307274df9b666d",
+      "filepath": "src/components/atoms/button/button.mdx",
+      "link": null,
+      "slug": "src-components-atoms-button-button",
+      "route": "/src-components-atoms-button-button",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "button",
+          "value": "Button"
+        },
+        {
+          "depth": 2,
+          "slug": "basic-usage",
+          "value": "Basic usage"
+        }
+      ]
+    }
+  }
+}
