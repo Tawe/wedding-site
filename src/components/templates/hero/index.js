@@ -40,8 +40,8 @@ const HeroContainer = styled.div`
 
 const NavContainer = styled.div`
   position: relative;
-  top: 5%;
-  width: 530px;
+  top: 78px;
+  width: 650px;
   margin: auto;
 `
 

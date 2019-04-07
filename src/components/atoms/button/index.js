@@ -6,39 +6,32 @@ function Button(props) {
   return <ButtonStyles {...props}>{props.children}</ButtonStyles>
 }
 
-const sizes = ({ size, theme, ...rest }) => {
-  return `
-    width: ${size === 'normal' ? '237px' : '495px'};
-    height: ${size === 'normal' ? '51px' : '51px'};
-    font-size: ${theme.fontsizes[1]};
-  `
-}
-
 const typeStyles = ({ type, theme, ...rest }) => {
   const { borders, fonts, fontsizes, fontweights, palette, space } = theme
   return `
-    background: ${type !== 'primary' ? palette.secondary[4] : 'none'};
+    background: ${type !== 'secondary' ? 'none' : palette.secondary[4]};
     color: ${type !== 'primary' ? palette.grayscale[0] : palette.grayscale[3]};
-    ${type === 'primary' && borders[0]};
+    ${type == 'primary' && borders[0]};
+    ${type == 'tertiary' && borders[1]};
+    font-weight: ${fontweights.bold};
     `
 }
 
 const ButtonStyles = styled('button')`
-  ${props => sizes(props)};
   ${props => typeStyles(props)};
+  padding: 20px 50px;
   text-transform: uppercase;
+  letter-spacing: 0.12rem;
   &:hover {
     cursor: pointer;
   }
 `
 
 Button.propTypes = {
-  size: t.oneOf(['small', 'normal']),
-  type: t.oneOf(['primary', 'secondary']),
+  type: t.oneOf(['primary', 'secondary','tertiary'])
 }
 
 Button.defaultProps = {
-  size: 'normal',
   type: 'primary',
 }
 
