@@ -2,6 +2,9 @@ import React from 'react'
 import gql from 'graphql-tag'
 import AccomodationsBlock from '../../molecules/accommodationblock'
 import { Query } from 'react-apollo'
+import { Flex, Box } from '@rebass/grid'
+
+import SetionTitle from '../../molecules/sectiontitle'
 
 const Accomodations = () => (
   <Query query={GetAccommodations}>
@@ -11,19 +14,22 @@ const Accomodations = () => (
 
       return (
         <section id="accommodations">
-          <h3>Accomodations</h3>
-          <p>
-            {`Blocks of rooms have been reserved at The ${
+          <SetionTitle
+            title="Accomodations"
+            byline={`Blocks of rooms have been reserved at ${
               data.accommodations[0].venue
-            } and
-            ${
-              data.accommodations[1].venue
             }. Call with a credit card and mention the
             Kailey/John wedding to receive a group rate.`}
-          </p>
-          {data.accommodations.map(accomodation => (
-            <AccomodationsBlock key={accomodation.id} {...accomodation} />
-          ))}
+          />
+          <Flex justifyContent="space-around">
+            {data.accommodations.map((accomodation, index) => (
+              <AccomodationsBlock
+                line={index === 0 && true}
+                key={accomodation.id}
+                {...accomodation}
+              />
+            ))}
+          </Flex>
         </section>
       )
     }}
@@ -38,6 +44,7 @@ const GetAccommodations = gql`
       id
       venue
       location
+      address
       phone_number
       distance
       link

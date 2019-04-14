@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Nav from '../../molecules/nav'
+import { TertiaryReg, PrimaryBold } from '../../atoms/fonts'
 
 const Hero = () => (
   <HeroContainer>
@@ -9,12 +10,16 @@ const Hero = () => (
     <NavContainer>
       <Nav />
     </NavContainer>
-    <div>
-      <div>#2becomemunn</div>
-      <Line />
-      <div>KAILEY + JOHN</div>
-    </div>
+    <Title />
   </HeroContainer>
+)
+
+const Title = () => (
+  <TitleWrapper>
+    <Hashtag>#2becomemunn</Hashtag>
+    <Line />
+    <Names>KAILEY & JOHN</Names>
+  </TitleWrapper>
 )
 
 const Overlay = styled.div`
@@ -42,14 +47,34 @@ const NavContainer = styled.div`
   position: relative;
   top: 78px;
   width: 650px;
-  margin: auto;
+  margin: 0 auto 230px;
+`
+
+const TitleWrapper = styled.div`
+  position: relative;
+  text-align: center;
+`
+
+const Hashtag = styled.div`
+  ${TertiaryReg};
+  font-size: ${props => props.theme.fontsizes[3]};
+  font-style: italic;
+  letter-spacing: 0.12rem;
+  color: ${props => props.theme.palette.grayscale[0]};
 `
 
 const Line = styled.div`
-  width: 50px;
+  width: 30px;
   height: 1px;
   margin: 20px auto;
   background: white;
+`
+
+const Names = styled.div`
+  ${PrimaryBold};
+  font-size: ${props => props.theme.fontsizes[5]};
+  letter-spacing: 0.32rem;
+  color: ${props => props.theme.palette.grayscale[0]};
 `
 
 export default Hero

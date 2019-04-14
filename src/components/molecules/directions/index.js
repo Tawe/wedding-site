@@ -1,5 +1,8 @@
 import React from 'react'
+import { Box } from '@rebass/grid'
+import styled from 'styled-components'
 
+import { TertiaryReg } from '../../atoms/fonts'
 import Button from '../../atoms/button'
 const Directions = ({ location, onClick }) => {
   let distance = null
@@ -7,12 +10,35 @@ const Directions = ({ location, onClick }) => {
     distance = getDistance({ lon: location.long, lat: location.lat }).toFixed()
   }
   return (
-    <div>
-      {distance && <p>`You are currently {distance} kilometres away`</p>}
+    <DirectionBox>
+      {distance && (
+        <DirectionText>
+          You are currently {distance} kilometres away
+        </DirectionText>
+      )}
       <Button onClick={onClick}>GET DIRECTIONS</Button>
-    </div>
+    </DirectionBox>
   )
 }
+
+const DirectionBox = styled(Box)`
+  width: 770px;
+  text-align: center;
+  margin: -80px auto 20px;
+  position: relative;
+  background: white;
+  padding: 40px;
+  height: 194px;
+`
+
+const DirectionText = styled.p`
+  ${TertiaryReg};
+  font-size: ${props => props.theme.fontsizes[3]};
+  letter-spacing: 0.12rem;
+  margin-bottom: 20px;
+  color: ${props => props.theme.palette.secondary[4]};
+  font-style: italic;
+`
 
 const getDistance = ({ lon, lat }) => {
   var p = 0.017453292519943295

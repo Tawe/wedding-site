@@ -17,7 +17,10 @@ const GlobalStyles = createGlobalStyle`
       font-family: mBold;
       src: url(./fonts/mBold.otf);
   }
-
+  @font-face {
+      font-family: mit;
+      src: url(./fonts/mit.otf);
+  }
 }
 
 `

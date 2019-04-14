@@ -1,12 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Box } from '@rebass/grid'
+
 import DetailsBlock from '../../molecules/detailsblock'
 
 const Details = () => (
   <DetailsWrapper id="details">
-    {Copy.map(item => (
-      <DetailsBlock key={item.title} {...item} />
-    ))}
+    <Box py={50}>
+      {Copy.map(item => (
+        <DetailsBlock key={item.title} {...item} />
+      ))}
+    </Box>
   </DetailsWrapper>
 )
 
@@ -25,7 +29,6 @@ const Copy = [
 
 const DetailsWrapper = styled.section`
   background-color: ${props => props.theme.palette.primary};
-  width: 100%;
 `
 
 export default Details

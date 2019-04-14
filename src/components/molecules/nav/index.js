@@ -17,7 +17,7 @@ const Nav = () => (
 const StyledLink = styled(Link)`
   margin-top: 10px;
 
-  &:after {
+  &::after {
     content: '';
     display: block;
     height: 1px;

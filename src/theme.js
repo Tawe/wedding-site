@@ -1,11 +1,11 @@
 import { css } from 'styled-components'
 
 const palette = {
-  primary: 'rgba(241, 213, 210, 1)',
+  primary: 'rgba(253, 249, 249, 1)',
   secondary: [
     'rgba(9, 25, 41, 1)',
     'rgba(84, 84, 84, 1)',
-    'rgba(123, 178, 164, 1)',
+    'rgba(241, 246, 245, 1)',
     'rgba(48, 51, 57, 1)',
     'rgba(2, 9, 16, 1)',
   ],
@@ -30,6 +30,7 @@ const fontsizes = ['8px', '12px', '14px', '16px', '35px', '45px', '110px']
 const fonts = {
   primary: `breg, sans-serif`,
   secondary: `mBold, serif`,
+  tertiary: `mit, serif`,
 }
 const fontweights = {
   light: 300,
@@ -37,7 +38,10 @@ const fontweights = {
   bold: 700,
 }
 
-const borders = [`border: 1px solid ${palette.grayscale[3]};`, `border: 1px solid ${palette.grayscale[0]};`]
+const borders = [
+  `border: 1px solid ${palette.grayscale[3]};`,
+  `border: 1px solid ${palette.grayscale[0]};`,
+]
 
 const media = Object.keys(breakpoints).reduce((accumulator, label) => {
   const emSize = breakpoints[label] / 16
