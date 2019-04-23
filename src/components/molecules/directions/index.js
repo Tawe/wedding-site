@@ -22,13 +22,14 @@ const Directions = ({ location, onClick }) => {
 }
 
 const DirectionBox = styled(Box)`
-  width: 770px;
   text-align: center;
   margin: -80px auto 20px;
   position: relative;
   background: white;
   padding: 40px;
   height: 194px;
+
+  ${props => props.theme.media.tablet`width: 770px;`}
 `
 
 const DirectionText = styled.p`

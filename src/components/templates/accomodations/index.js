@@ -3,6 +3,7 @@ import gql from 'graphql-tag'
 import AccomodationsBlock from '../../molecules/accommodationblock'
 import { Query } from 'react-apollo'
 import { Flex, Box } from '@rebass/grid'
+import styled from 'styled-components'
 
 import SetionTitle from '../../molecules/sectiontitle'
 
@@ -21,13 +22,12 @@ const Accomodations = () => (
             }. Call with a credit card and mention the
             Kailey/John wedding to receive a group rate.`}
           />
-          <Flex justifyContent="space-around">
+          <Flex flexDirection={['column', 'row']} justifyContent="space-around">
             {data.accommodations.map((accomodation, index) => (
-              <AccomodationsBlock
-                line={index === 0 && true}
-                key={accomodation.id}
-                {...accomodation}
-              />
+              <Box mb={['50px', 0]} key={accomodation.id}>
+                <AccomodationsBlock {...accomodation} />
+                {index === 0 && <Line />}
+              </Box>
             ))}
           </Flex>
         </section>
@@ -35,6 +35,12 @@ const Accomodations = () => (
     }}
   </Query>
 )
+
+const Line = styled.div`
+  width: 1px;
+  opacity: 0.14;
+  background: ${props => props.theme.palette.secondary[4]};
+`
 
 export default Accomodations
 

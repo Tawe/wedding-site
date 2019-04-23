@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
+import styled from 'styled-components'
+import { Query } from 'react-apollo'
+import { Box } from '@rebass/grid'
+import gql from 'graphql-tag'
 import RSVPForm from '../../molecules/rsvpform'
 import RSVPView from '../../molecules/rsvpview'
-import gql from 'graphql-tag'
-import { Query } from 'react-apollo'
+import SectionTitle from '../../molecules/sectiontitle'
 
 const RSVP = () => {
   const [state, setState] = useState({
@@ -24,7 +27,8 @@ const RSVP = () => {
   }
 
   return (
-    <div>
+    <RSVPWrap py={[0, 126]} width={['90%', '405px']}>
+      <SectionTitle title="RSVP" />
       {!state.name && <RSVPForm cb={getName} />}
       <Query
         query={GetAccommodations}
@@ -33,7 +37,6 @@ const RSVP = () => {
       >
         {({ loading, error, data }) => {
           if (loading) return <p>Loading..</p>
-          data && console.log(data.guests)
           return (
             <div>
               {(error || (data && data.guests.length === 0)) && (
@@ -51,19 +54,27 @@ const RSVP = () => {
           )
         }}
       </Query>
-    </div>
+    </RSVPWrap>
   )
 }
+
+const RSVPWrap = styled(Box)`
+  margin: auto;
+`
 
 const GetAccommodations = gql`
   query guests($name: String!) {
     guests(where: { name: $name }) {
       name
+      firstName
       title
       id
       songRequest
       isAttending
       message
+      plusOne {
+        name
+      }
     }
   }
 `

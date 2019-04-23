@@ -5,17 +5,26 @@ function Input(props) {
   return <InputStyles {...props} />
 }
 
-const InputStyles = styled('input')`
+const InputStyles = styled.input`
   text-transform: uppercase;
-  width: 495px;
-  height: 45px;
+  width: 100%;
+  height: 100%;
   font-size: 12px;
   text-indent: 27px;
   color: ${props => props.theme.palette.grayscale[1]};
   ${props => props.theme.borders[0]};
 
-  &::-webkit-input-placeholder {
-    color: ${props => props.theme.palette.grayscale[1]};
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: ${props => props.theme.palette.grayscale[4]};
+  }
+
+  &:placeholder {
+    color: ${props => props.theme.palette.grayscale[4]};
+  }
+
+  &:-webkit-input-placeholder {
+    color: ${props => props.theme.palette.grayscale[4]};
   }
 `
 

@@ -14,6 +14,7 @@ const palette = {
     'rgba(0, 0, 0, 1)',
     'rgba(0, 0, 0, 0.16)',
     'rgba(43, 43, 43, 1)',
+    'rgba(149, 145, 145, 1)',
   ],
 }
 
@@ -54,7 +55,7 @@ const media = Object.keys(breakpoints).reduce((accumulator, label) => {
 }, {})
 
 const theme = {
-  breakpoints,
+  breakpoints: ['32em', '48em', '64em'],
   palette,
   space,
   fonts,

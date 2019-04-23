@@ -17,11 +17,13 @@ const typeStyles = ({ type, theme, ...rest }) => {
     `
 }
 
-const ButtonStyles = styled('button')`
+const ButtonStyles = styled.button`
   ${props => typeStyles(props)};
   padding: 20px 50px;
   text-transform: uppercase;
   letter-spacing: 0.12rem;
+  height: ${props => props.fullscreen && '100%'};
+  width: ${props => props.fullscreen && '100%'};
 
   &:hover {
     cursor: pointer;
