@@ -8,6 +8,7 @@ function Label({ children, ...rest }) {
 
 const LabelStyles = styled.label`
   ${PrimaryBold};
+  letter-spacing: 0.12rem;
   font-size: ${props => props.theme.fontsizes[1]};
 `
 

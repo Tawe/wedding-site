@@ -6,7 +6,6 @@ import Circle from '../../atoms/circle'
 
 const Paginator = () => {
   const [active, setActive] = useState(0)
-  console.log(active)
   return (
     <Flex justifyContent="center" alignItems="center">
       <Circle

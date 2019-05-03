@@ -15,6 +15,7 @@ const CheckBoxStyles = styled(Input)`
   -moz-appearance: none;
   -webkit-appearance: none;
   -o-appearance: none;
+  transition: all 250ms;
   &:checked {
     background-color: black;
   }

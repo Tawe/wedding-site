@@ -20,6 +20,8 @@ const palette = {
 
 /** Breakpoints are min-width based */
 const breakpoints = {
+  mobile: 400,
+  navBreak: 650,
   tablet: 768,
   desktop: 1200,
   bigdesktop: 1500,

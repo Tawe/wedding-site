@@ -1,5 +1,4 @@
-import React, { useRef } from 'react'
-import styled from 'styled-components'
+import React from 'react'
 import Input from '../../atoms/input'
 import Button from '../../atoms/button'
 import Label from '../../atoms/label'
@@ -11,12 +10,14 @@ const RSVPForm = ({ cb }) => (
       <Label htmlFor="name">YOUR FULL NAME: </Label>
     </Box>
     <Box mb="21px" height="51px">
-      <Input name="name" id="name" fullscreen placeholder="Ex: Tom Wilson" />
+      <Input name="name" id="name" />
     </Box>
 
-    <Button type="secondary" fullscreen>
-      GET STARTED
-    </Button>
+    <Box height="51px" width="100%">
+      <Button type="secondary" fullscreen>
+        GET STARTED
+      </Button>
+    </Box>
   </form>
 )
 

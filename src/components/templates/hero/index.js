@@ -1,24 +1,49 @@
 import React from 'react'
 import styled from 'styled-components'
+import Media from 'react-media'
+import { Box } from '@rebass/grid'
 
 import Nav from '../../molecules/nav'
+import MobileNav from '../../molecules/mobilenav'
 import { TertiaryReg, PrimaryBold } from '../../atoms/fonts'
 
-const Hero = () => (
+import Button from '../../atoms/button'
+const Hero = ({ menuOpen, setMenuOpen }) => (
   <HeroContainer>
     <Overlay />
     <NavContainer>
-      <Nav />
+      <Media query="(max-width: 650px)">
+        {matches =>
+          matches ? (
+            <MobileNav setMenuOpen={setMenuOpen} menuOpen={menuOpen} />
+          ) : (
+            <Nav />
+          )
+        }
+      </Media>
     </NavContainer>
-    <Title />
+    <Title {...{ menuOpen }} {...{ setMenuOpen }} />
   </HeroContainer>
 )
 
-const Title = () => (
+const Title = ({ menuOpen, setMenuOpen }) => (
   <TitleWrapper>
     <Hashtag>#2becomemunn</Hashtag>
     <Line />
-    <Names>KAILEY & JOHN</Names>
+    <Names>
+      KAILEY <AMP>&</AMP> JOHN
+    </Names>
+    <Media query="(max-width: 650px)">
+      {matches =>
+        matches && (
+          <Box mt="60px" width="155px" mx="auto">
+            <Button href="#RSVP" type="tertiary">
+              RSVP
+            </Button>
+          </Box>
+        )
+      }
+    </Media>
   </TitleWrapper>
 )
 
@@ -34,9 +59,13 @@ const Overlay = styled.div`
   height: 100%;
 `
 
+const AMP = styled.span`
+  font-weight: 200;
+`
+
 const HeroContainer = styled.div`
   width: 100%;
-  height: 820px;
+  height: 100vh;
   background: url('./assets/imgs/hero_large.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -44,22 +73,26 @@ const HeroContainer = styled.div`
 `
 
 const NavContainer = styled.div`
-  position: relative;
+  position: absolute;
   top: 78px;
-  width: 650px;
-  margin: 0 auto 230px;
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  z-index: 222;
+  ${props => props.theme.media.navBreak`position:relative`}
 `
 
 const TitleWrapper = styled.div`
   position: relative;
   text-align: center;
+  padding-top: 230px;
 `
 
 const Hashtag = styled.div`
   ${TertiaryReg};
   font-size: ${props => props.theme.fontsizes[3]};
   font-style: italic;
-  letter-spacing: 0.12rem;
+  letter-spacing: 2px;
   color: ${props => props.theme.palette.grayscale[0]};
 `
 

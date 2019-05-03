@@ -11,12 +11,15 @@ const Directions = ({ location, onClick }) => {
   }
   return (
     <DirectionBox>
-      {distance && (
-        <DirectionText>
-          You are currently {distance} kilometres away
-        </DirectionText>
-      )}
-      <Button onClick={onClick}>GET DIRECTIONS</Button>
+      <DirectionText>
+        {distance && <>You are currently {distance} kilometres away</>}
+      </DirectionText>
+      <Button
+        href="https://maps.google.com/?saddr=My%20Location&daddr=Pugwash,+Nova+Scotia"
+        target="_blank"
+      >
+        GET DIRECTIONS
+      </Button>
     </DirectionBox>
   )
 }
@@ -35,8 +38,8 @@ const DirectionBox = styled(Box)`
 const DirectionText = styled.p`
   ${TertiaryReg};
   font-size: ${props => props.theme.fontsizes[3]};
-  letter-spacing: 0.12rem;
-  margin-bottom: 20px;
+  letter-spacing: 2px;
+  margin-bottom: 38px;
   color: ${props => props.theme.palette.secondary[4]};
   font-style: italic;
 `

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { Box } from '@rebass/grid'
 
@@ -6,7 +6,7 @@ import { SecondaryBold, PrimaryReg } from '../../atoms/fonts'
 
 const SectionTitle = ({ title, byline }) => (
   <SectionTitleWrap mt={92} mb={42}>
-    <Title mb={18}>{title}</Title>
+    <Title mb="5px">{title}</Title>
     <ByLine>{byline}</ByLine>
   </SectionTitleWrap>
 )
@@ -23,10 +23,10 @@ const Title = styled(Box)`
 
 const ByLine = styled.div`
   ${PrimaryReg};
-  font-size: ${props => props.theme.fontsizes[3]};
+  font-size: ${props => props.theme.fontsizes[1]};
   max-width: 560px;
   line-height: 1.5rem;
-  letter-spacing: 0.005rem;
+  letter-spacing: 1px;
 
   margin: auto;
   color: ${props => props.theme.palette.grayscale[3]};

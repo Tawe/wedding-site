@@ -23,7 +23,7 @@ const Copy = [
   {
     title: 'When',
     bold: 'SEPTEMBER 01, 2019',
-    info: 'Ceremony 4pm // Reception 6pm',
+    info: 'Ceremony 4pm //  Reception 6pm',
   },
 ]
 

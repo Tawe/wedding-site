@@ -14,32 +14,55 @@ const Accomodations = () => (
       if (error) return <p>Error :(</p>
 
       return (
-        <section id="accommodations">
-          <SetionTitle
-            title="Accomodations"
-            byline={`Blocks of rooms have been reserved at ${
-              data.accommodations[0].venue
-            }. Call with a credit card and mention the
-            Kailey/John wedding to receive a group rate.`}
-          />
-          <Flex flexDirection={['column', 'row']} justifyContent="space-around">
+        <AccomodationsSetion id="accommodations">
+          <SetionTitle title="Accomodations" />
+          <AccomodationsP>
+            Blocks of rooms have been reserved at
+            {data.accommodations[0].venue}. Call with a credit card and mention
+            the Kailey/John wedding to receive a group rate.
+          </AccomodationsP>
+          <AccomodationsFlex
+            flexDirection={['column', 'row']}
+            justifyContent="space-around"
+          >
             {data.accommodations.map((accomodation, index) => (
-              <Box mb={['50px', 0]} key={accomodation.id}>
-                <AccomodationsBlock {...accomodation} />
+              <>
+                <Box mb={['50px', 0]} key={accomodation.id}>
+                  <AccomodationsBlock {...accomodation} />
+                </Box>
                 {index === 0 && <Line />}
-              </Box>
+              </>
             ))}
-          </Flex>
-        </section>
+          </AccomodationsFlex>
+        </AccomodationsSetion>
       )
     }}
   </Query>
 )
 
+const AccomodationsSetion = styled.section`
+  margin-bottom: 60px;
+`
+
 const Line = styled.div`
   width: 1px;
   opacity: 0.14;
   background: ${props => props.theme.palette.secondary[4]};
+`
+
+const AccomodationsFlex = styled(Flex)`
+  max-width: 700px;
+  margin: auto;
+  min-height: 234px;
+`
+
+const AccomodationsP = styled.p`
+  font-size: 16px;
+  max-width: 570px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 54px;
+  line-height: 1.6;
 `
 
 export default Accomodations

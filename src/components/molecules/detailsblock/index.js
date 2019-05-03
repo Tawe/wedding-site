@@ -19,7 +19,8 @@ const TitleStyles = styled(Box)`
 
 const BoldStyles = styled(Box)`
   ${PrimaryBold};
-  font-size: ${props => props.theme.fontsizes[2]};
+  letter-spacing: 1px;
+  font-size: ${props => props.theme.fontsizes[1]};
   text-transform: uppercase;
 `
 

@@ -12,7 +12,10 @@ const LinkStyles = styled.a`
   text-transform: uppercase;
   ${PrimaryLight}
   font-size: ${props => props.theme.fontsizes[1]};
-  color: ${props => props.theme.palette.grayscale[0]};
+  color: ${props =>
+    props.type
+      ? props.theme.palette.grayscale[1]
+      : props.theme.palette.grayscale[0]};
   letter-spacing: 0.12rem;
   text-decoration: none;
 `

@@ -10,7 +10,9 @@ const Nav = () => (
     <StyledLink href="#details">Details</StyledLink>
     <StyledLink href="#location">Location</StyledLink>
     <StyledLink href="#accommodations">Accommodations</StyledLink>
-    <Button type="tertiary">RSVP</Button>
+    <Button href="#RSVP" type="tertiary">
+      RSVP
+    </Button>
   </Flex>
 )
 
