@@ -1,18 +1,5 @@
 import { css } from 'styled-components'
 
-const PrimaryLight = css`
-  font-family: ${props => props.theme.fonts.primary};
-  font-weight: ${props => props.theme.fontweights.light};
-`
-const PrimaryReg = css`
-  font-family: ${props => props.theme.fonts.primary};
-`
-
-const PrimaryBold = css`
-  font-family: ${props => props.theme.fonts.primary};
-  font-weight: ${props => props.theme.fontweights.bold};
-`
-
 const SecondayLight = css`
   font-family: ${props => props.theme.fonts.secondary};
   font-weight: ${props => props.theme.fontweights.light};
@@ -40,9 +27,6 @@ const TertiaryBold = css`
 `
 
 export {
-  PrimaryBold,
-  PrimaryLight,
-  PrimaryReg,
   SecondaryBold,
   SecondaryReg,
   SecondayLight,

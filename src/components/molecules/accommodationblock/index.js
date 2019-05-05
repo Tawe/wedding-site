@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { Box } from '@rebass/grid'
 import t from 'prop-types'
 
-import { PrimaryReg, PrimaryBold } from '../../atoms/fonts'
 import Button from '../../atoms/button'
 
 function AccommondationBlock({
@@ -54,16 +53,15 @@ const AccommondationItems = styled(Box)`
   line-height: 1.42rem;
   letter-spacing: 1px;
   text-transform: uppercase;
-  ${props => props.bold && PrimaryBold};
+  ${props => props.bold && props.theme.fontweights.bold};
 `
 
 const AccommondationAddress = styled(Box)`
   line-height: 1.42rem;
-  ${props => props.bold && PrimaryBold};
+  ${props => props.bold && props.theme.fontweights.bold};
 `
 
 const AccommondationBox = styled(Box)`
-  ${PrimaryReg};
   margin: auto;
   text-align: center;
 `

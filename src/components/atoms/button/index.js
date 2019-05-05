@@ -1,6 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
-import { PrimaryReg } from '../fonts'
+import styled, { css } from 'styled-components'
 import t from 'prop-types'
 
 function Button(props) {
@@ -26,33 +25,24 @@ const typeStyles = ({ type, theme, ...rest }) => {
     `
 }
 
-const StyledLink = styled.a`
+const Styles = css`
   ${props => typeStyles(props)};
   padding: 15px 55px;
   text-transform: uppercase;
   letter-spacing: 0.12rem;
-  font-size: ${props => props.theme.fontsizes[1]}
   text-decoration: none;
-  height: ${props => props.fullscreen && '100%'};
-  width: ${props => props.fullscreen && '100%'};
-  &:hover {
-    cursor: pointer;
-  }
+  font-size: ${props => props.theme.fontsizes[1]};
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+`
+
+const StyledLink = styled.a`
+  ${Styles};
 `
 
 const ButtonLink = styled.button`
-  ${props => typeStyles(props)};
-  padding: 15px 55px;
-  ${PrimaryReg}
-  text-transform: uppercase;
-  letter-spacing: 0.12rem;
-  font-size: ${props => props.theme.fontsizes[1]}
-
-  height: ${props => props.fullscreen && '100%'};
-  width: ${props => props.fullscreen && '100%'};
-  &:hover {
-    cursor: pointer;
-  }
+  ${Styles};
 `
 
 Button.propTypes = {

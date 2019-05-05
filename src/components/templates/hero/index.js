@@ -5,7 +5,7 @@ import { Box } from '@rebass/grid'
 
 import Nav from '../../molecules/nav'
 import MobileNav from '../../molecules/mobilenav'
-import { TertiaryReg, PrimaryBold } from '../../atoms/fonts'
+import { TertiaryReg } from '../../atoms/fonts'
 
 import Button from '../../atoms/button'
 const Hero = ({ menuOpen, setMenuOpen }) => (
@@ -104,8 +104,8 @@ const Line = styled.div`
 `
 
 const Names = styled.div`
-  ${PrimaryBold};
   font-size: ${props => props.theme.fontsizes[5]};
+  font-weight: ${props => props.theme.fontweights.bold};
   letter-spacing: 0.32rem;
   color: ${props => props.theme.palette.grayscale[0]};
 `

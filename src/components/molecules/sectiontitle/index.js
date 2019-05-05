@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Box } from '@rebass/grid'
 
-import { SecondaryBold, PrimaryReg } from '../../atoms/fonts'
+import { SecondaryBold } from '../../atoms/fonts'
 
 const SectionTitle = ({ title, byline }) => (
   <SectionTitleWrap mt={92} mb={42}>
@@ -22,7 +22,6 @@ const Title = styled(Box)`
 `
 
 const ByLine = styled.div`
-  ${PrimaryReg};
   font-size: ${props => props.theme.fontsizes[1]};
   max-width: 560px;
   line-height: 1.5rem;

@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { PrimaryLight } from '../../atoms/fonts'
-
 const Link = ({ children, ...rest }) => (
   <LinkStyles {...rest}>{children}</LinkStyles>
 )
@@ -10,8 +8,8 @@ const Link = ({ children, ...rest }) => (
 const LinkStyles = styled.a`
   cursor: pointer;
   text-transform: uppercase;
-  ${PrimaryLight}
   font-size: ${props => props.theme.fontsizes[1]};
+  font-weight: ${props => props.theme.fontweights.bold};
   color: ${props =>
     props.type
       ? props.theme.palette.grayscale[1]

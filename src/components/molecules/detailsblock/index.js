@@ -2,7 +2,7 @@ import React from 'react'
 import { Flex, Box } from '@rebass/grid'
 import styled from 'styled-components'
 
-import { SecondaryBold, PrimaryBold, PrimaryReg } from '../../atoms/fonts'
+import { SecondaryBold } from '../../atoms/fonts'
 
 const DetailsBlock = ({ title, bold, info }) => (
   <Flex flexDirection="column" alignItems="center" m={53}>
@@ -18,14 +18,13 @@ const TitleStyles = styled(Box)`
 `
 
 const BoldStyles = styled(Box)`
-  ${PrimaryBold};
   letter-spacing: 1px;
   font-size: ${props => props.theme.fontsizes[1]};
+  font-weight: ${props => props.theme.fontweights.bold};
   text-transform: uppercase;
 `
 
 const InfoStyles = styled.span`
-  ${PrimaryReg};
   font-size: ${props => props.theme.fontsizes[3]};
 `
 

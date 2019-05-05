@@ -38,7 +38,7 @@ const fonts = {
 const fontweights = {
   light: 300,
   medium: 500,
-  bold: 700,
+  bold: 800,
 }
 
 const borders = [
