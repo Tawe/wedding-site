@@ -8,24 +8,30 @@ import Home from './components/pages/home'
 
 const GlobalStyles = createGlobalStyle`
   body {
-    overflow:${props => props.menuOpen && 'hidden'};
-    transition: 0.4s;
-    font-family: breg;
+    overflow: ${props => props.menuOpen && 'hidden'};
+    font-family: ${props => props.theme.fonts.primary};
+
     @font-face {
       font-family: breg;
       src: url(./fonts/breg.otf);
     }
 
     @font-face {
+      font-family: breg;
+      src: url(./fonts/bbold.otf);
+      font-weight: 800;
+    }
+
+    @font-face {
       font-family: mBold;
       src: url(./fonts/mBold.otf);
-  }
-  @font-face {
+    }
+
+    @font-face {
       font-family: mit;
       src: url(./fonts/mit.otf);
+    }
   }
-}
-
 `
 
 const client = new ApolloClient({
