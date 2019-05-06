@@ -54,7 +54,7 @@ const Hero = ({ menuOpen, setMenuOpen }) => (
 )
 
 const HeroTitle = ({ menuOpen, setMenuOpen }) => (
-  <Box pt="275px" textAlign="center" position="relative">
+  <Box pt={['175px', '275px']} textAlign="center" position="relative">
     <Box
       fontFamily={theme.fonts.tertiary}
       fontSize={theme.fontsizes[3]}
@@ -68,6 +68,8 @@ const HeroTitle = ({ menuOpen, setMenuOpen }) => (
       fontSize={theme.fontsizes[5]}
       fontWeight={theme.fontweights.bold}
       letterSpacing="0.32rem"
+      width={['170px', '100%']}
+      m="auto"
       color={theme.palette.grayscale[0]}
     >
       KAILEY{' '}

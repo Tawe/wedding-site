@@ -44,6 +44,7 @@ const FlexStyle = styled(Flex)`
 
 const InputStyles = styled.input`
   display: ${props => props.display};
+  box-sizing: border-box;
   ${BaseStyles};
 `
 

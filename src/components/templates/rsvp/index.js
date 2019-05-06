@@ -29,7 +29,7 @@ const RSVP = () => {
 
   return (
     <RSVPSection>
-      <Box m="auto" pt="1px" pb="100px" width={['90%', '405px']} id="RSVP">
+      <Box m="auto" pt="1px" pb="100px" width={['290px', '405px']} id="RSVP">
         <SectionTitle title="RSVP" />
         {!state.name && !state.thanks && <RSVPForm cb={getName} />}
         <Query
