@@ -1,0 +1,24 @@
+---
+name: DetailsBlock
+---
+
+import { Playground, PropsTable } from 'docz'
+import ThemeProvider from '../../../themeProvider'
+
+import DetailsBlock from './'
+
+# DetailsBlock
+
+<PropsTable of={DetailsBlock} />
+
+## Basic usage
+
+<Playground>
+  <ThemeProvider>
+    <DetailsBlock
+      title="Where"
+      bold="The thinkers lodge"
+      info="Pugwash, Nova Scotia"
+    />
+  </ThemeProvider>
+</Playground>
