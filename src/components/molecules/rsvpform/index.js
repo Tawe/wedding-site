@@ -1,8 +1,8 @@
 import React from 'react'
-import Input from '../../atoms/input'
+import { Input } from '../../atoms/input'
 import Button from '../../atoms/button'
 import Label from '../../atoms/label'
-import Box from '../../atoms/box'
+import { Box } from '../../atoms/box'
 
 const RSVPForm = ({ cb }) => (
   <form onSubmit={cb}>

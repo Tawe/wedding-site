@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Query } from 'react-apollo'
-import { Box } from '@rebass/grid'
 import gql from 'graphql-tag'
+
+import { Box } from '../../atoms/box'
 import RSVPForm from '../../molecules/rsvpform'
 import RSVPView from '../../molecules/rsvpview'
 import SectionTitle from '../../molecules/sectiontitle'
+import Button from '../../atoms/button'
 
 const RSVP = () => {
   const [state, setState] = useState({
@@ -22,11 +24,12 @@ const RSVP = () => {
     })
   }
 
-  const moveToThanks = message => setState({ thanks: message })
+  const moveToThanks = attending =>
+    setState({ thanks: true, attending: attending, name: state.name })
 
   return (
     <RSVPSection>
-      <RSVPWrap pt="1px" pb="100px" width={['90%', '405px']} id="RSVP">
+      <Box m="auto" pt="1px" pb="100px" width={['90%', '405px']} id="RSVP">
         <SectionTitle title="RSVP" />
         {!state.name && !state.thanks && <RSVPForm cb={getName} />}
         <Query
@@ -38,15 +41,31 @@ const RSVP = () => {
             if (loading) return <p>Loading..</p>
             return (
               <div>
-                {console.log(data && data.guests[0].notes)}
                 {state.thanks ? (
-                  <RSVPThanks>
-                    Your attendance has been confirmed. We are so thrilled that
-                    you can make it! :clap:
-                  </RSVPThanks>
+                  <Box mt="17px" textAlign="center" lineHeight="1.5rem">
+                    {state.attending ? (
+                      <>
+                        Your attendance has been confirmed. We are so thrilled
+                        that you can make it! 👏
+                      </>
+                    ) : (
+                      <>Sorry to hear you are unable to attend 😢</>
+                    )}
+                    <Box mt="21px">
+                      <Button
+                        type="secondary"
+                        onClick={() =>
+                          setState({ thanks: false, name: state.name })
+                        }
+                      >
+                        Back
+                      </Button>
+                    </Box>
+                  </Box>
                 ) : (
                   <>
-                    {(error || (data && data.guests.length === 0)) && (
+                    {(error ||
+                      (!error && (data && data.guests.length === 0))) && (
                       <div>
                         <RSVPForm cb={getName} />
                         <p>There was an error</p>
@@ -56,7 +75,7 @@ const RSVP = () => {
                       {data && data.guests.length !== 0 && state.name && (
                         <RSVPView
                           {...data.guests[0]}
-                          cb={() => moveToThanks(data.guests[0].notes)}
+                          cb={attending => moveToThanks(attending)}
                         />
                       )}
                     </div>
@@ -66,14 +85,10 @@ const RSVP = () => {
             )
           }}
         </Query>
-      </RSVPWrap>
+      </Box>
     </RSVPSection>
   )
 }
-
-const RSVPWrap = styled(Box)`
-  margin: auto;
-`
 
 const RSVPSection = styled.section`
   background-color: ${props => props.theme.palette.secondary[2]};
@@ -84,25 +99,21 @@ const RSVPSection = styled.section`
   }
 `
 
-const RSVPThanks = styled.div`
-  text-align: center;
-  margin-top: 17px;
-`
-
 const GetAccommodations = gql`
   query guests($name: String!) {
     guests(where: { name: $name }) {
+      id
       name
       firstName
-      title
-      id
       songRequest
       isAttending
+      hasRSVPed
       message
-      notes
-      plusOne {
-        name
-      }
+      greeting
+      hasChildren
+      childrenAttending
+      plusOne
+      hasPlusOne
     }
   }
 `

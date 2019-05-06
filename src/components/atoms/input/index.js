@@ -1,17 +1,19 @@
 import React from 'react'
-import styled from 'styled-components'
+import { Input } from '../box'
 
-function Input(props) {
-  return <InputStyles {...props} />
-}
+import theme from '../../../theme'
 
-const InputStyles = styled.input`
-  width: 100%;
-  height: 100%;
-  font-size: 16px;
-  text-indent: 27px;
-  color: ${props => props.theme.palette.grayscale[1]};
-  ${props => props.theme.borders[0]};
-`
+const InputComponent = props => (
+  <Input
+    {...props}
+    width="100%"
+    height="100%"
+    fontSize={theme.fontsizes[3]}
+    textIndent="27px"
+    color={theme.palette.grayscale[1]}
+    border={theme.borders[0]}
+    fontFamily={theme.fonts.primary}
+  />
+)
 
-export default Input
+export { InputComponent as Input }

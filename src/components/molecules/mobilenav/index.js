@@ -1,13 +1,14 @@
 import React from 'react'
-import { Flex, Box } from '@rebass/grid'
+import { Flex, Box } from '../../atoms/box'
 import styled from 'styled-components'
 
 const MobileNav = ({ menuOpen, setMenuOpen }) => (
-  <StyledFlex
+  <Flex
     ml={`calc(100% - 80px)`}
     justifyContent="space-around"
     flexDirection="column"
     width="38px"
+    cursor="pointer"
     onClick={() => {
       setMenuOpen(!menuOpen)
     }}
@@ -15,12 +16,8 @@ const MobileNav = ({ menuOpen, setMenuOpen }) => (
     <Line position="top" menuOpen={menuOpen} />
     <Line my="10px" menuOpen={menuOpen} />
     <Line position="bottom" menuOpen={menuOpen} />
-  </StyledFlex>
+  </Flex>
 )
-
-const StyledFlex = styled(Flex)`
-  cursor: pointer;
-`
 
 const Line = styled(Box)`
   width: 100%;

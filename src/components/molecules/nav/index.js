@@ -1,18 +1,20 @@
 import React from 'react'
-import { Flex } from '@rebass/grid'
 import styled from 'styled-components'
 
 import Link from '../../atoms/link'
 import Button from '../../atoms/button'
+import { Flex, Box } from '../../atoms/box'
 
 const Nav = () => (
   <Flex alignItems="center" justifyContent="space-around">
     <StyledLink href="#details">Details</StyledLink>
     <StyledLink href="#location">Location</StyledLink>
     <StyledLink href="#accommodations">Accommodations</StyledLink>
-    <Button href="#RSVP" type="tertiary">
-      RSVP
-    </Button>
+    <Box>
+      <Button href="#RSVP" type="tertiary">
+        RSVP
+      </Button>
+    </Box>
   </Flex>
 )
 

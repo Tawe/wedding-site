@@ -2,11 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import { Input } from '../input/index'
 
-function Radio(props) {
-  return <RadioStyles type="radio" {...props} />
+function Checkbox(props) {
+  return <CheckboxStyles type="checkbox" {...props} />
 }
 
-const RadioStyles = styled(Input)`
+const CheckboxStyles = styled(Input)`
   height: 14px;
   width: 14px;
   margin-right: 15px;
@@ -20,4 +20,4 @@ const RadioStyles = styled(Input)`
   }
 `
 
-export default Radio
+export default Checkbox

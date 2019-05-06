@@ -12,7 +12,10 @@ const Location = () => {
   })
   return (
     <section id="location">
-      <SectionTitle title="Thinker’s Lodge" byline="PUGWASH, NOVA SCOTIA" />
+      <SectionTitle
+        title="Thinkers Lodge"
+        byline=" 249 WATER STREET, PUGWASH, NOVA SCOTIA"
+      />
       <Map info={state} />
       <Directions
         onClick={() => {

@@ -1,15 +1,15 @@
 import React from 'react'
-import styled from 'styled-components'
+import { Box } from '../../atoms/box'
 
-const MiddleImages = () => <Img />
-
-const Img = styled.div`
-  width: 100%;
-  height: 564px;
-  background: url('./assets/imgs/image2.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-`
+const MiddleImages = () => (
+  <Box
+    width="100%"
+    height="564px"
+    background="url('./assets/imgs/image2.png')"
+    backgroundSize="cover"
+    backgroundRepeat="no-repeat"
+    backgroundPosition="center"
+  />
+)
 
 export default MiddleImages

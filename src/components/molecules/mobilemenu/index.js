@@ -1,69 +1,70 @@
 import React from 'react'
-import { Flex, Box } from '@rebass/grid'
+import { Flex, Box } from '../../atoms/box'
 import styled from 'styled-components'
 
 import Link from '../../atoms/link'
 import Button from '../../atoms/button'
+import theme from '../../../theme'
+
+const Links = [
+  {
+    href: '#details',
+    copy: 'Details',
+  },
+  {
+    href: '#location',
+    copy: 'Location',
+  },
+  {
+    href: '#accommodations',
+    copy: 'Accommodations',
+  },
+]
+
 const MobileNav = ({ menuOpen, setMenuOpen }) => (
-  <StyledBox width="100%" height="100%" menuOpen={menuOpen}>
-    <StyledFlex
+  <Box
+    width="100%"
+    height="100%"
+    position="fixed"
+    top="0"
+    transition="0.4s"
+    menuOpen={menuOpen}
+    background={theme.palette.grayscale[0]}
+    right={menuOpen ? '0%' : '100%'}
+  >
+    <Flex
       alignItems="center"
       flexDirection="column"
       justifyContent="space-around"
       mt="184px"
+      height="234px"
     >
-      <StyledLink
-        type="dark"
-        href="#details"
-        onClick={() => {
-          setMenuOpen(!menuOpen)
-        }}
-      >
-        Details
-      </StyledLink>
-      <StyledLink
-        type="dark"
-        href="#location"
-        onClick={() => {
-          setMenuOpen(!menuOpen)
-        }}
-      >
-        Location
-      </StyledLink>
-      <StyledLink
-        type="dark"
-        href="#accommodations"
-        onClick={() => {
-          setMenuOpen(!menuOpen)
-        }}
-      >
-        Accommodations
-      </StyledLink>
-      <Button
-        href="#RSVP"
-        type="primary"
-        onClick={() => {
-          setMenuOpen(!menuOpen)
-        }}
-      >
-        RSVP
-      </Button>
-    </StyledFlex>
-  </StyledBox>
+      {Links.map(link => (
+        <StyledLink
+          key={link.href}
+          type="dark"
+          href={link.href}
+          onClick={() => {
+            setMenuOpen(!menuOpen)
+          }}
+        >
+          {link.copy}
+        </StyledLink>
+      ))}
+      <Box>
+        <Button
+          href="#RSVP"
+          type="primary"
+          onClick={() => {
+            setMenuOpen(!menuOpen)
+          }}
+        >
+          RSVP
+        </Button>
+      </Box>
+    </Flex>
+  </Box>
 )
-
-const StyledBox = styled(Box)`
-  position: fixed;
-  top: 0;
-  right: ${props => (props.menuOpen ? '0%' : '100%')};
-  background: ${props => props.theme.palette.grayscale[0]};
-  height: 100%;
-  transition: 0.4s;
-`
-
-const StyledFlex = styled(Flex)`
-  height: 234px;
-`
 
 const StyledLink = styled(Link)`
   margin-top: 10px;

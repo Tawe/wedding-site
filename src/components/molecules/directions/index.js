@@ -1,48 +1,42 @@
 import React from 'react'
-import { Box } from '@rebass/grid'
-import styled from 'styled-components'
 
-import { TertiaryReg } from '../../atoms/fonts'
+import theme from '../../../theme'
+import { Box, P } from '../../atoms/box'
 import Button from '../../atoms/button'
+
 const Directions = ({ location, onClick }) => {
   let distance = null
   if (location) {
     distance = getDistance({ lon: location.long, lat: location.lat }).toFixed()
   }
   return (
-    <DirectionBox>
-      <DirectionText>
+    <Box
+      textAlign="center"
+      m="-80px auto 20px"
+      position="relative"
+      background="white"
+      p="40px"
+      height="194px"
+      maxWidth="800px"
+    >
+      <P
+        fontFamily={theme.fonts.tertiary}
+        fontSize={theme.fontsizes[3]}
+        letterSpacing="2px"
+        mb="38px"
+        color={theme.palette.secondary[4]}
+      >
         {distance && <>You are currently {distance} kilometres away</>}
-      </DirectionText>
+      </P>
       <Button
-        href="https://maps.google.com/?saddr=My%20Location&daddr=Pugwash,+Nova+Scotia"
+        href="https://maps.google.com/?saddr=My%20Location&daddr=249 Water St, Pugwash, NS B0K 1L0"
         target="_blank"
       >
         GET DIRECTIONS
       </Button>
-    </DirectionBox>
+    </Box>
   )
 }
-
-const DirectionBox = styled(Box)`
-  text-align: center;
-  margin: -80px auto 20px;
-  position: relative;
-  background: white;
-  padding: 40px;
-  height: 194px;
-
-  ${props => props.theme.media.tablet`width: 770px;`}
-`
-
-const DirectionText = styled.p`
-  ${TertiaryReg};
-  font-size: ${props => props.theme.fontsizes[3]};
-  letter-spacing: 2px;
-  margin-bottom: 38px;
-  color: ${props => props.theme.palette.secondary[4]};
-  font-style: italic;
-`
 
 const getDistance = ({ lon, lat }) => {
   var p = 0.017453292519943295

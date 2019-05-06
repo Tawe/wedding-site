@@ -6,8 +6,8 @@ import mapTheme from './mapTheme'
 
 const settings = {
   center: {
-    lat: 45.8536402,
-    lng: -63.6661275,
+    lat: 45.8533722,
+    lng: -63.6658099
   },
   zoom: 16,
 }
@@ -25,8 +25,8 @@ const MapContainer = props => {
         }}
       >
         <AnyReactComponent
-          lat={45.8536402}
-          lng={-63.6661275}
+          lat={45.853996}
+          lng={-63.6658099}
           text="My Marker"
         />
       </GoogleMapReact>
@@ -44,10 +44,14 @@ const AnyReactComponent = () => (
   </svg>
 )
 
-const MapWrapper = styled('div')`
+const MapWrapper = styled.div`
   height: 542px;
   padding: 0;
   ${props => props.theme.media.tablet`padding:0 05%`}
+
+ div:nth-child(9) > div:nth-child(2){
+    display:none;
+  }
 `
 
 export default MapContainer

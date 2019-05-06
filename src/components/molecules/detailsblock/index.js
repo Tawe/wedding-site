@@ -1,31 +1,28 @@
 import React from 'react'
-import { Flex, Box } from '@rebass/grid'
-import styled from 'styled-components'
 
-import { SecondaryBold } from '../../atoms/fonts'
+import theme from '../../../theme'
+import { Flex, Box } from '../../atoms//box'
 
 const DetailsBlock = ({ title, bold, info }) => (
   <Flex flexDirection="column" alignItems="center" m={53}>
-    <TitleStyles mb={16}>{title}</TitleStyles>
-    <BoldStyles mb="5px">{bold}</BoldStyles>
-    <InfoStyles>{info}</InfoStyles>
+    <Box
+      fontSize={theme.fontsizes[4]}
+      fontFamily={theme.fonts.secondary}
+      mb={16}
+    >
+      {title}
+    </Box>
+    <Box
+      letterSpacing="1px"
+      fontSize={theme.fontsizes[1]}
+      fontWeight={theme.fontweights.bold}
+      textTransform="uppercase"
+      mb="5px"
+    >
+      {bold}
+    </Box>
+    <Box fontSize={theme.fontsizes[3]}>{info}</Box>
   </Flex>
 )
-
-const TitleStyles = styled(Box)`
-  ${SecondaryBold}
-  font-size: ${props => props.theme.fontsizes[4]};
-`
-
-const BoldStyles = styled(Box)`
-  letter-spacing: 1px;
-  font-size: ${props => props.theme.fontsizes[1]};
-  font-weight: ${props => props.theme.fontweights.bold};
-  text-transform: uppercase;
-`
-
-const InfoStyles = styled.span`
-  font-size: ${props => props.theme.fontsizes[3]};
-`
 
 export default DetailsBlock

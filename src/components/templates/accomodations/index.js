@@ -1,10 +1,10 @@
 import React from 'react'
 import gql from 'graphql-tag'
-import AccomodationsBlock from '../../molecules/accommodationblock'
 import { Query } from 'react-apollo'
-import { Flex, Box } from '@rebass/grid'
-import styled from 'styled-components'
 
+import theme from '../../../theme'
+import { Flex, Box, Section } from '../../atoms/box'
+import AccomodationsBlock from '../../molecules/accommodationblock'
 import SetionTitle from '../../molecules/sectiontitle'
 
 const Accomodations = () => (
@@ -14,56 +14,44 @@ const Accomodations = () => (
       if (error) return <p>Error :(</p>
 
       return (
-        <AccomodationsSetion id="accommodations">
-          <SetionTitle title="Accomodations" />
-          <AccomodationsP>
-            Blocks of rooms have been reserved at
-            {data.accommodations[0].venue}. Call with a credit card and mention
-            the Kailey/John wedding to receive a group rate.
-          </AccomodationsP>
-          <AccomodationsFlex
+        <Section mb="92px" id="accommodations">
+          <SetionTitle
+            title="Accommodations"
+            byline={
+              <Box fontSize={theme.fontsizes[3]} px="10px">
+                Blocks of rooms have been reserved at&nbsp;
+                {data.accommodations[0].venue}. Call with a credit card and
+                mention the Kailey/John wedding to receive a group rate.
+              </Box>
+            }
+          />
+          <Flex
             flexDirection={['column', 'row']}
             justifyContent="space-around"
+            maxWidth="700px"
+            m="auto"
+            minHeight="234px"
           >
             {data.accommodations.map((accomodation, index) => (
-              <>
-                <Box mb={['50px', 0]} key={accomodation.id}>
+              <React.Fragment key={accomodation.id}>
+                <Box mb={['50px', 0]}>
                   <AccomodationsBlock {...accomodation} />
                 </Box>
-                {index === 0 && <Line />}
-              </>
+                {index === 0 && (
+                  <Box
+                    width="1px"
+                    opacity="0.14"
+                    background={theme.palette.secondary[4]}
+                  />
+                )}
+              </React.Fragment>
             ))}
-          </AccomodationsFlex>
-        </AccomodationsSetion>
+          </Flex>
+        </Section>
       )
     }}
   </Query>
 )
-
-const AccomodationsSetion = styled.section`
-  margin-bottom: 60px;
-`
-
-const Line = styled.div`
-  width: 1px;
-  opacity: 0.14;
-  background: ${props => props.theme.palette.secondary[4]};
-`
-
-const AccomodationsFlex = styled(Flex)`
-  max-width: 700px;
-  margin: auto;
-  min-height: 234px;
-`
-
-const AccomodationsP = styled.p`
-  font-size: 16px;
-  max-width: 570px;
-  margin: 0 auto;
-  text-align: center;
-  margin-bottom: 54px;
-  line-height: 1.6;
-`
 
 export default Accomodations
 
