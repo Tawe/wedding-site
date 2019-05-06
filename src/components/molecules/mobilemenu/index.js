@@ -36,7 +36,7 @@ const MobileNav = ({ menuOpen, setMenuOpen }) => (
       alignItems="center"
       flexDirection="column"
       justifyContent="space-around"
-      mt="184px"
+      mt="154px"
       height="234px"
     >
       {Links.map(link => (
@@ -52,7 +52,7 @@ const MobileNav = ({ menuOpen, setMenuOpen }) => (
           {link.copy}
         </StyledLink>
       ))}
-      <Box>
+      <Box mt="15px">
         <Button
           href="#RSVP"
           type="primary"

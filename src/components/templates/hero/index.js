@@ -68,7 +68,7 @@ const HeroTitle = ({ menuOpen, setMenuOpen }) => (
       fontSize={theme.fontsizes[5]}
       fontWeight={theme.fontweights.bold}
       letterSpacing="0.32rem"
-      width={['170px', '100%']}
+      width={['160px', '100%']}
       m="auto"
       color={theme.palette.grayscale[0]}
     >
