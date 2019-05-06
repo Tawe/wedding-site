@@ -96,6 +96,9 @@ const RSVPSection = styled.section`
   checkbox,
   textarea {
     background: none;
+    box-sizing: border-box;
+    border-radius: none;
+    box-shadow: none;
   }
 `
 
