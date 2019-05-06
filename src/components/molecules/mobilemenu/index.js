@@ -43,6 +43,7 @@ const MobileNav = ({ menuOpen, setMenuOpen }) => (
         <StyledLink
           key={link.href}
           type="dark"
+          target="_self"
           href={link.href}
           onClick={() => {
             setMenuOpen(!menuOpen)
@@ -69,22 +70,8 @@ const MobileNav = ({ menuOpen, setMenuOpen }) => (
 const StyledLink = styled(Link)`
   margin-top: 10px;
   color: black;
-
-  &::after {
-    content: '';
-    display: block;
-    height: 1px;
-    background: white;
-    width: 0;
-    margin-top: 10px;
-    transition: 0.25s all ease-in-out;
-  }
-
-  &:hover {
-    &::after {
-      width: 100%;
-    }
-  }
+  display: block;
+  opacity: 1;
 `
 
 export default MobileNav

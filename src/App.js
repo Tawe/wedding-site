@@ -7,10 +7,13 @@ import { ApolloProvider } from 'react-apollo'
 import Home from './components/pages/home'
 
 const GlobalStyles = createGlobalStyle`
+  * {
+      z-index: 0;
+  }
   html {
     scroll-behavior: smooth;  
   }
-  
+
   body {
     overflow: ${props => props.menuOpen && 'hidden'};
     font-family: ${props => props.theme.fonts.primary};

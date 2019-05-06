@@ -97,8 +97,11 @@ const RSVPSection = styled.section`
   textarea {
     background: none;
     box-sizing: border-box;
-    border-radius: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
     box-shadow: none;
+    -webkit-appearance: none;
+    font-size: inherit;
   }
 `
 
