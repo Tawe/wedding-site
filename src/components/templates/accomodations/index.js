@@ -18,7 +18,7 @@ const Accomodations = () => (
           <SetionTitle
             title="Accommodations"
             byline={
-              <Box fontSize={theme.fontsizes[3]} px="10px">
+              <Box fontSize={theme.fontsizes[3]} px="10px" letterSpacing="0px">
                 Blocks of rooms have been reserved at&nbsp;
                 {data.accommodations[0].venue}. Call with a credit card and
                 mention the Kailey/John wedding to receive a group rate.

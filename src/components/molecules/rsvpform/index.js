@@ -12,8 +12,8 @@ const RSVPForm = ({ cb }) => (
     </Box>
     <Box mb="21px" height="51px">
       <Input name="name" id="name" />
-      <Box mt="4px" mb="20px" fontSize={theme.fontsizes[1]}>
-        * Make sure to enter your name exactly as it written on your invitation.
+      <Box mt="6px" mb="20px" fontSize={theme.fontsizes[1]}>
+        *please enter your full name exactly as it is written on your invite
       </Box>
     </Box>
 

@@ -17,14 +17,20 @@ function Button(props) {
 const typeStyles = ({ type, theme, ...rest }, hover) => {
   const { borders, fontweights, palette, fonts } = theme
   if (hover) {
-    if (type !== 'secondary') {
+    if (type !== 'secondary' && type !== 'tertiary') {
       type = 'secondary'
     } else {
       type = 'primary'
     }
   }
   return `
-    background: ${type !== 'secondary' ? 'none' : palette.secondary[4]};
+    background: ${
+      type !== 'tertiary' && type !== 'secondary'
+        ? palette.grayscale[0]
+        : type !== 'secondary'
+        ? 'none'
+        : palette.secondary[4]
+    };
     color: ${type !== 'primary' ? palette.grayscale[0] : palette.grayscale[3]};
     border: ${
       type !== 'tertiary' ? borders[0] : type === 'tertiary' && borders[1]
