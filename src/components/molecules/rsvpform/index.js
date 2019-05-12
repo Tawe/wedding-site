@@ -17,7 +17,7 @@ const RSVPForm = ({ cb }) => (
       </Box>
     </Box>
 
-    <Box height="51px" width="100%" mt="35px">
+    <Box height="51px" width="100%" mt="55px">
       <Button type="secondary" fullscreen>
         GET STARTED
       </Button>
