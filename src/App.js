@@ -39,7 +39,6 @@ const GlobalStyles = createGlobalStyle`
     @font-face {
       font-family: mit;
       src: url(./fonts/mit.otf);
-      font-style: italic;
     }
 
     #location > div.sc-dnqmqq.gJhPl > div > div > div > div > div:nth-child(3){
