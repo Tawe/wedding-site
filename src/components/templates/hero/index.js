@@ -11,6 +11,7 @@ const Hero = ({ menuOpen, setMenuOpen }) => (
   <Box
     width="100%"
     height="100vh"
+    min-height="700px "
     background="url('./assets/imgs/hero_large.jpg');"
     backgroundSize="cover"
     backgroundRepeat="no-repeat"
@@ -54,7 +55,7 @@ const Hero = ({ menuOpen, setMenuOpen }) => (
 )
 
 const HeroTitle = ({ menuOpen, setMenuOpen }) => (
-  <Box pt={['165px', '275px']} textAlign="center" position="relative">
+  <Box pt={['165px', '175px', '275px']} textAlign="center" position="relative">
     <Box
       fontFamily={theme.fonts.tertiary}
       fontSize={theme.fontsizes[3]}
