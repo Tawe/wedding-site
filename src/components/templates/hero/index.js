@@ -27,7 +27,7 @@ const Hero = ({ menuOpen, setMenuOpen }) => (
       {matches =>
         matches ? (
           <Box
-            top="78px"
+            top="60px"
             zIndex="222"
             position="absolute"
             width="100%"

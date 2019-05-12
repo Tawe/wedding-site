@@ -5,7 +5,7 @@ const MiddleImages = () => (
   <Box
     width="100%"
     height="564px"
-    background="url('./assets/imgs/image2.jpg')"
+    background="url('./assets/imgs/image2.png')"
     backgroundSize="cover"
     backgroundRepeat="no-repeat"
     backgroundPosition="center"
