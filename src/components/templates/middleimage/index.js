@@ -8,7 +8,7 @@ const MiddleImages = () => (
     background="url('./assets/imgs/image2.jpg')"
     backgroundSize="cover"
     backgroundRepeat="no-repeat"
-    backgroundPosition="center top"
+    backgroundPosition="center"
   />
 )
 
