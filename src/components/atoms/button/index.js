@@ -42,6 +42,7 @@ const typeStyles = ({ type, theme, ...rest }, hover) => {
 
 const Styles = css`
   ${props => typeStyles(props, false)};
+  transition: 0.25s all ease-in-out;
   padding: 15px 55px;
   text-transform: uppercase;
   letter-spacing: 0.12rem;
