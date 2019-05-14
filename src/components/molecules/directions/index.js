@@ -31,6 +31,7 @@ const Directions = ({ location, onClick }) => {
       <Button
         href="https://maps.google.com/?saddr=My%20Location&daddr=249 Water St, Pugwash, NS B0K 1L0"
         target="_blank"
+        rel="noreferrer"
       >
         GET DIRECTIONS
       </Button>

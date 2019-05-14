@@ -25,13 +25,15 @@ function AccommondationBlock({
         {venue}
       </Box>
       <Box lineHeight="1.42rem">{address}</Box>
-      <Box mb={20} lineHeight="1.42rem">{location}</Box>
+      <Box mb={20} lineHeight="1.42rem">
+        {location}
+      </Box>
       <Box mb={20}>{phone_number}</Box>
       <Box mb={40}>
         <CarIcon />
         {distance}
       </Box>
-      <Button href={link} type="primary" target="_blank">
+      <Button href={link} rel="noreferrer" type="primary" target="_blank">
         Book Online
       </Button>
     </Box>
