@@ -59,9 +59,6 @@ const RSVPView = ({
       childrenAttending:
         newVals.childrenAttending && newVals.childrenAttending.checked,
     }
-
-    console.log(data, id)
-
     setRSVP({ variables: { data, id } })
     cb(state.attending)
   }

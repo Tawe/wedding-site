@@ -31,6 +31,7 @@ const MobileNav = ({ menuOpen, setMenuOpen }) => (
     menuOpen={menuOpen}
     background={theme.palette.grayscale[0]}
     right={menuOpen ? '0%' : '100%'}
+    zIndex="224"
   >
     <Flex
       alignItems="center"
