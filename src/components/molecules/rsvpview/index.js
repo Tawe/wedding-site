@@ -52,10 +52,10 @@ const RSVPView = ({
     const newVals = e.currentTarget
     const data = {
       isAttending: state.attending,
-      message: newVals.message.value,
-      songRequest: newVals.songRequest.value,
+      message: newVals.message ? newVals.message.value : '',
+      songRequest: newVals.songRequest ? newVals.songRequest.value : '',
       hasRSVPed: true,
-      plusOne: newVals.guest.value,
+      plusOne: newVals.guest ? newVals.guest.value : '',
       childrenAttending:
         newVals.childrenAttending && newVals.childrenAttending.checked,
     }
