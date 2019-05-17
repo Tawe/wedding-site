@@ -194,7 +194,8 @@ const TextAreaStyles = styled.textarea`
   display: block;
   height: 116px;
   width: 100%;
-  text-indent: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
 `
 
 const SetRSVP = gql`

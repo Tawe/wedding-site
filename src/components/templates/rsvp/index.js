@@ -68,7 +68,7 @@ const RSVP = () => {
                       (!error && (data && data.guests.length === 0))) && (
                       <div>
                         <RSVPForm cb={getName} />
-                        <p>There was an error</p>
+                        <p>Make sure you are only entering one name.</p>
                       </div>
                     )}
                     <div>
