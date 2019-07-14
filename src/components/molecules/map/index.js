@@ -7,32 +7,26 @@ import mapTheme from './mapTheme'
 const settings = {
   center: {
     lat: 45.8533722,
-    lng: -63.6658099
+    lng: -63.6658099,
   },
   zoom: 16,
 }
-const MapContainer = props => {
-  return (
-    <MapWrapper>
-      <GoogleMapReact
-        center={settings.center}
-        zoom={settings.zoom}
-        bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAP_API }}
-        options={{
-          styles: mapTheme,
-          zoomControl: false,
-          fullscreenControl: false,
-        }}
-      >
-        <AnyReactComponent
-          lat={45.853996}
-          lng={-63.6658099}
-          text="My Marker"
-        />
-      </GoogleMapReact>
-    </MapWrapper>
-  )
-}
+const MapContainer = () => (
+  <MapWrapper>
+    <GoogleMapReact
+      center={settings.center}
+      zoom={settings.zoom}
+      bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAP_API }}
+      options={{
+        styles: mapTheme,
+        zoomControl: false,
+        fullscreenControl: false,
+      }}
+    >
+      <AnyReactComponent lat={45.853996} lng={-63.6658099} text="My Marker" />
+    </GoogleMapReact>
+  </MapWrapper>
+)
 
 const AnyReactComponent = () => (
   <svg width="17.298" height="23.063" viewBox="0 0 17.298 23.063">
@@ -47,10 +41,9 @@ const AnyReactComponent = () => (
 const MapWrapper = styled.div`
   height: 542px;
   padding: 0;
-  ${props => props.theme.media.tablet`padding:0 05%`}
 
- div:nth-child(9) > div:nth-child(2){
-    display:none;
+  div:nth-child(9) > div:nth-child(2) {
+    display: none;
   }
 `
 
