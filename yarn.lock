@@ -9312,10 +9312,6 @@ react-hot-loader@^4.6.3:
     shallowequal "^1.0.2"
     source-map "^0.7.3"
 
-react-ideal-image@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/react-ideal-image/-/react-ideal-image-0.0.5.tgz#92a1d6e7e6d5a32b2a6a41e82ffb7f122ed9bddf"
-
 react-imported-component@^5.2.4:
   version "5.5.3"
   resolved "https://registry.yarnpkg.com/react-imported-component/-/react-imported-component-5.5.3.tgz#e96605129afcba9afd30adc97aca770c1101f757"
@@ -9457,6 +9453,12 @@ react-sizes@^1.0.4:
   dependencies:
     lodash.throttle "^4.1.1"
     prop-types "^15.6.0"
+
+react-visibility-sensor@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/react-visibility-sensor/-/react-visibility-sensor-5.1.0.tgz#3d3cec7df0c39da7a92ce12590be04a13dce8e14"
+  dependencies:
+    prop-types "^15.6.2"
 
 react@^16.7.0, react@^16.8.3:
   version "16.8.6"
