@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@rebass/grid": "^6.0.0-7",
+    "react-background-image": "^1.2.0",
     "docz": "^0.13.7",
     "docz-theme-default": "^0.13.7",
     "eslint-config-airbnb": "^17.1.0",
