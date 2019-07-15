@@ -28,7 +28,6 @@
     "docz-theme-default": "^0.13.7",
     "eslint-config-airbnb": "^17.1.0",
     "prettier": "^1.14.2",
-    "react-ideal-image": "^0.0.5",
     "styled-components": "^4.1.3",
     "styled-reset": "^2.0.0",
     "styled-system": "^4.0.1",
