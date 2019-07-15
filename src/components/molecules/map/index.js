@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import GoogleMapReact from 'google-map-react'
 import styled from 'styled-components'
-import VisibilitySensor from 'react-visibility-sensor'
+import Visibility from '../../atoms/visibility'
 
 import mapTheme from './mapTheme'
 
@@ -12,23 +12,11 @@ const settings = {
   },
   zoom: 16,
 }
-const MapContainer = () => {
-  const [state, setState] = useState({
-    visible: false,
-  })
-  const changeVisiblity = isVisible => setState({ visible: isVisible })
-  return (
-    <VisibilitySensor
-      onChange={changeVisiblity}
-      partialVisibility
-      active={!state.visible}
-    >
-      {({ isVisible }) => (
-        <>{isVisible ? <VisibleContents /> : <MapWrapper />}</>
-      )}
-    </VisibilitySensor>
-  )
-}
+const MapContainer = () => (
+  <Visibility>
+    {isVisible => <>{isVisible ? <VisibleContents /> : <MapWrapper />}</>}
+  </Visibility>
+)
 
 const VisibleContents = () => (
   <MapWrapper>

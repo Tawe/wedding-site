@@ -9,8 +9,23 @@ import { Box } from '../../atoms/box'
 import Button from '../../atoms/button'
 import hdImage from './hero_large.jpg'
 import smallImage from './hero_small.jpg'
+import Visibility from '../../atoms/visibility'
 
 const Hero = ({ menuOpen, setMenuOpen }) => (
+  <Visibility>
+    {isVisible => (
+      <>
+        {isVisible ? (
+          <VisibleContents {...{ menuOpen }} {...{ setMenuOpen }} />
+        ) : (
+          <Box width="100%" height="100vh" min-height="700px" />
+        )}
+      </>
+    )}
+  </Visibility>
+)
+
+const VisibleContents = ({ menuOpen, setMenuOpen }) => (
   <Box width="100%" height="100vh" min-height="700px ">
     <BackgroundImage placeholder={smallImage} src={hdImage}>
       <Box
