@@ -27,7 +27,11 @@ const Hero = ({ menuOpen, setMenuOpen }) => (
 
 const VisibleContents = ({ menuOpen, setMenuOpen }) => (
   <Box width="100%" height="100vh" min-height="700px ">
-    <BackgroundImage placeholder={smallImage} src={hdImage}>
+    <BackgroundImage
+      style={{ position: 'inherit' }}
+      placeholder={smallImage}
+      src={hdImage}
+    >
       <Box
         position="absolute"
         background="linear-gradient(359deg, rgba(84, 84, 84, 0) 0%, rgba(0, 0, 0, 1) 100%)"
